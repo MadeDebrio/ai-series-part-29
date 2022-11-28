@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
     public LayerMask HidableLayers;
     public EnemyLineOfSightChecker LineOfSightChecker;
     public NavMeshAgent Agent;
+    
     [Range(-1, 1)]
     [Tooltip("Lower is a better hiding spot")]
     public float HideSensitivity = 0;

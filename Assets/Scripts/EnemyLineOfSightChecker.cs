@@ -7,7 +7,7 @@ public class EnemyLineOfSightChecker : MonoBehaviour
     public SphereCollider Collider;
     public float FieldOfView = 90f;
     public LayerMask LineOfSightLayers;
-
+    
     public delegate void GainSightEvent(Transform Target);
     public GainSightEvent OnGainSight;
     public delegate void LoseSightEvent(Transform Target);
@@ -45,7 +45,7 @@ public class EnemyLineOfSightChecker : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, direction, out RaycastHit hit, Collider.radius, LineOfSightLayers))
             {
-                OnGainSight?.Invoke(Target);
+                OnGainSight?.Invoke(Target);                
                 return true;
             }
         }
